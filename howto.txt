@@ -1,0 +1,6 @@
+podpis:
+http://www.w3schools.com/angular/angular_databinding.asp
+
+
+Dodatkowe ficzery:
+- edycja maila z ctrl+a do czytalnego

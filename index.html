@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Copy-to-clipboard</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<base href="/">
+	<style>
+	.jumbotron {padding: 2rem 1rem;!important}
+	button.dropdown-toggle:hover > .dropdown-menu {display: block;}
+	.ctc-category {cursor: pointer;}
+	</style>
+</head>
+<body ng-app="ctc">
+    <div class="jumbotron jumbotron-fluid">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-xl-9">
+					<h4 class="text-sm-center">Danfoss copy-to-clipboard tool<br>
+					<small class="text-muted">Choose your content, <button type="button" class="btn btn-primary btn-sm">Copy</button> and <kbd><kbd>Ctrl</kbd></kbd> + <kbd><kbd>V</kbd></kbd> it!</small></h4>
+				</div>
+				<div class="col-xs-12 col-md-4 col-xl-3">
+					<div class="form-group row">
+						<label for="name-input" class="col-xs-2 col-md-3 col-form-label">Name: </label>
+						<div class="col-xs-10 col-md-9 input-group">
+							<input class="form-control" type="text" placeholder="For footer complexity purposes..." id="name-input">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Copy a standard signature">Copy</button>
+								<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="ft-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="sr-only">Type of footer</span>
+								</button>
+								<div id="footer-dropdown" class="dropdown-menu dropdown-menu-right">
+									<div class="dropdown-item">
+										<label class="custom-control custom-radio">
+											<input id="ft1" name="ft-radio" type="radio" class="custom-control-input">
+											<span class="custom-control-indicator"></span>
+											<span class="custom-control-description">Name and surname</span>
+										</label>
+									</div>
+									<div class="dropdown-item">
+										<label class="custom-control custom-radio">
+											<input id="ft2" name="ft-radio" type="radio" class="custom-control-input">
+											<span class="custom-control-indicator"></span>
+											<span class="custom-control-description">Short signature</span>
+										</label>
+									</div>
+									<div class="dropdown-item">
+										<label class="custom-control custom-radio">
+											<input id="ft3" name="ft-radio" type="radio" class="custom-control-input">
+											<span class="custom-control-indicator"></span>
+											<span class="custom-control-description">Standard signature</span>
+										</label>
+									</div>
+									<div role="separator" class="dropdown-divider"></div>
+									<div class="dropdown-item">
+										<label class="custom-control custom-radio">
+											<input id="ft4" name="ft-radio" type="radio" class="custom-control-input">
+											<span class="custom-control-indicator"></span>
+											<span class="custom-control-description">Custom signature</span>
+										</label>
+									</div>
+								</div>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-view></div>
+	
+<script src="/p1/js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+<script src="/p1/js/tether.min.js"></script>
+<script src="/p1/js/bootstrap.min.js"></script>
+<script src="/p1/js/clipboard.min.js"></script>
+<script src="/p1/js/pages.js"></script>
+<script src="/p1/js/copies.js"></script>
+
+</body>
+</html>
